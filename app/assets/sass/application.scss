@@ -282,3 +282,8 @@ a:focus {
   background-color: transparent;
   outline: none;
 }
+
+.button.alert {
+  background-color: $error-colour;
+  border-bottom: darken($error-colour, 5%);
+}
