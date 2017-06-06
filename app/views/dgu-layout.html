@@ -43,15 +43,16 @@
     <div id="global-cookie-message">
 
         {% block cookie_message %}{% endblock %}
-
     </div>
-
 
     <header role="banner" id="global-header" class="{% block header_class %}{% endblock %}">
       <div class="header-wrapper">
         <div class="header-global">
           <div class="header-logo">
-            <a href="/">Find UK Government data</a>
+            <a href="/" title="Go to the GOV.UK PDE homepage" id="logo" class="content">
+              <img src="{{ asset_path }}images/gov.uk_logotype_crown.png" width="36" height="32" alt=""> GOV.UK
+              <span id="product-name">PDE</span>
+            </a>
             <strong class="phase-tag">ALPHA</strong>
           </div>
           {% block inside_header %}{% endblock %}

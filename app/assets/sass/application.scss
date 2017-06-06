@@ -9,6 +9,12 @@ $path: "/public/images/";
 // Take a look at in app/assets/sass/patterns/ to see which files are imported.
 @import 'patterns/check-your-answers';
 @import 'patterns/task-list';
+@import 'patterns/headers';
+@import 'patterns/product-overview-page';
+@import 'patterns/search-in-header';
+@import 'patterns/tabs';
+@import 'patterns/subnav';
+@import 'patterns/helpers';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -80,7 +86,7 @@ $path: "/public/images/";
 
 .header-logo {
   font-size: 24px;
-  padding-left: 1.5em;
+  //padding-left: 1.5em;
   color: white;
   a {
     color:white;
