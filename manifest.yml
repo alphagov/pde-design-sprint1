@@ -1,0 +1,6 @@
+---
+applications:
+- name: pde-design-sprint1
+  buildpack: nodejs_buildpack
+  memory: 256MB
+  instances: 1
