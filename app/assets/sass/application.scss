@@ -1,0 +1,274 @@
+// Path to assets for use with the file-url function
+// in the govuk frontend toolkit's url-helpers partial
+$path: "/public/images/";
+
+// Import GOV.UK elements from /govuk-modules/, this will import the frontend toolkit and some base styles.
+// Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at in app/assets/sass/patterns/ to see which files are imported.
+@import 'patterns/check-your-answers';
+@import 'patterns/task-list';
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em;
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.masthead {
+    margin: 0;
+    background: #eee;
+    padding: 0 1.5em 2em 1.5em;
+}
+
+/* Facet block */
+.filter-block {
+  xwidth: 90%;
+  background: #eee;
+  padding: 10px;
+  margin-top: 20px;
+  .bold {
+    font-weight: bold;
+  }
+  select {
+    width: 100%;
+  }
+  label {
+    padding-bottom: 1em;
+  }
+}
+
+/* Make secondary heading work even with a heading-medium  */
+.heading-medium {
+  margin-top: 12px;
+  .heading-secondary {
+    display: block;
+    color: #555;
+    font-size: 80%;
+    font-weight: normal;
+    margin-top: .4em;
+  }
+}
+
+.dataset {
+  border-left: solid 8px #fff;
+  h1 {
+    font-weight: normal;
+  }
+}
+
+.dataset.register {
+  background-color: #eee;
+  border-left: solid 8px black;
+  padding: .2em .2em .2em 1.5em;
+}
+
+.header-logo {
+  font-size: 24px;
+  padding-left: 1.5em;
+  color: white;
+  a {
+    color:white;
+    text-decoration: none;
+  }
+}
+
+.phase-tag {
+  margin-left: 1em;
+}
+
+#global-header.with-proposition .header-wrapper .header-global {
+  width: 50%;
+}
+
+.search {
+  box-sizing: border-box;
+  height: 40px;
+  width: 100%;
+  margin-right: -40px;
+}
+
+.search-submit {
+  vertical-align: middle;
+  box-sizing: border-box;
+  height: 38px;
+  width: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  background: #0b0c0c url(https://assets.publishing.service.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat 2px 50%;
+  text-indent: -5000px;
+  border: 0;
+  padding: 0;
+}
+
+.search-suggest {
+  font-size: 80%;
+  padding-top: .5em;
+}
+
+ul.pagination {
+  list-style-type: none;
+  li {
+    display: inline-block;
+    padding-right: .3em;
+  }
+}
+
+.dataset {
+  section {
+    margin-bottom: 3em;
+  }
+  h2 {
+    margin-top: 0;
+    font-weight: normal;
+    &.related {
+      font-weight: bold;
+    }
+  }
+  ul.dataset-details {
+    font-size: 80%;
+    margin-bottom: 3em;
+    list-style-type: none;
+    div {
+      display: inline-block;
+      width: 9em;
+    }
+  }
+  .title-download {
+    h2 { float: left; }
+    div {
+      margin-top: .4em;
+      float: right;
+    }
+  }
+  .year-expand {
+    height: 3em;
+    border-bottom: 1px solid $grey-2;
+    h3 { float: left; }
+    div { float: right; }
+  }
+  .description {
+    margin-bottom: 2em;
+  }
+  nav.dataset-toc {
+    ul li {
+      list-style: none;
+      &:before {
+        content: "–";
+        padding-right: 8px;
+      }
+      a {
+        color: $text-colour;
+        text-decoration: none;
+      }
+    }
+  }
+  ul.related-list {
+    li {
+      border-bottom: 1px solid $grey-2;
+    }
+  }
+  hr,.breaker {
+    clear: both;
+  }
+  hr {
+    margin-bottom: 0;
+  }
+  span.expand {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .preview {
+    padding-right: 1.4em;
+  }
+  .year-datasets {
+    li { margin: .7em 0 .5em 0 }
+    h4 { margin-bottom: .3em }
+    li + li { margin-top: 2em }
+  }
+  a.report-a-problem {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    position:absolute;
+  }
+}
+
+.local-authority-choice {
+  .button {
+    background-color: lightgray;
+    margin-top: 30px;
+    color: black;
+    border-style: solid;
+    border-width: thin;
+  }
+  .heading-first {
+    font-size: 24px;
+    margin-top: 30px;
+    color: grey;
+  }
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+#previewer {
+  margin-top: -2px;
+  border: solid 3px #ddd;
+}
+
+.preview-table {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.tab {
+  display: inline;
+  padding: 20px;
+  padding-bottom: 0px;
+  line-height: 30px;
+  border: solid 2px #ddd;
+  border-bottom: none;
+  margin-right: 4px;
+  a {
+    position: relative;
+    top: -8px;
+    text-decoration: none;
+  }
+}
+
+.tab.inactive {
+  background-color: #eee;
+}
+.tab.active {
+    border-color: #aaa;
+}
+
+
+.dataset-toc
+{
+  position: sticky !important;
+  top: 10px;
+}
+
+
+a:focus {
+  background-color: transparent;
+  outline: none;
+}
