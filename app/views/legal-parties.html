@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Review legal agreements
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Review your legal agreements
+  </h1>
+
+  <table>
+     <thead>
+    <tr>
+      <th scope="col">Organisation</th>
+      <th scope="col">Data</th>
+      <th scope="col">Status</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          Department for Education
+        </td>
+        <td>
+          PIP, UC
+        </td>
+        <td>
+          Second revision
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Review <span class="visuallyhidden">Exporter name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Warwickshire County Council
+        </td>
+        <td>
+          PIP
+        </td>
+        <td>
+          New request
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Review <span class="visuallyhidden">Producer name</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Essex County Council
+        </td>
+        <td>
+          New request
+        </td>
+        <td>
+          PIP
+        </td>
+        <td class="change-answer">
+          <a href="#">
+            Review <span class="visuallyhidden">Site of export name</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="form-group">
+    <a href="confirmation-page" class="button">Return to data requests</a>
+  </div>
+
+</main>
+
+{% endblock %}
