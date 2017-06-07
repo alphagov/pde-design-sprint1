@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Propose change - Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+  <h1 class="heading-large">Do you want to propose a change?</h1>
+  <form>
+    <div class="form-group">
+      <fieldset>
+
+        <legend class="visually-hidden">Do you already have a personal user account?</legend>
+
+        <div class="multiple-choice">
+          <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+          <label for="radio-inline-1">Yes</label>
+        </div>
+        <div class="multiple-choice">
+          <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+          <label for="radio-inline-2">No, I want to decline</label>
+        </div>
+
+      </fieldset>
+    </div>
+  </form>
+
+  <a href="/team-b/decline-data-request.html" class="button">Next</a>
+</main>
+
+{% endblock %}
