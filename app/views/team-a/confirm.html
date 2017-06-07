@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Check your answers
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">
+    Review the draft agreement before you send
+  </h1>
+
+  <p>You can review the draft agreement before you send it to the Department of Work and Pensions.</p>
+
+  <table class="check-your-answers">
+
+    <thead>
+      <tr>
+        <th colspan="2">
+          <h2 class="heading-medium">
+            Agreement clauses
+          </h2>
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          What data will be given
+        </td>
+        <td>
+          {{ data_what }}
+        </td>
+        <td class="change-answer">
+          <a href="./blue-badge-what">
+            Change <span class="visuallyhidden">What data will be given</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          What data will be provided
+        </td>
+        <td>
+          {{ data_provided }}
+        </td>
+        <td class="change-answer">
+          <a href="./blue-badge-what">
+            Change <span class="visuallyhidden">What data will be provided</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          What the data will be used for
+        </td>
+        <td>
+          {{ data_use }}
+        </td>
+        <td class="change-answer">
+          <a href="./blue-badge-what">
+            Change <span class="visuallyhidden">What the data will be used for</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          How the data will be accessed
+        </td>
+        <td>
+          {{ data_how }}
+        </td>
+        <td class="change-answer">
+          <a href="./blue-badge-how">
+            Change <span class="visuallyhidden">How the data will be accessed</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Who will be responsible for the data access
+        </td>
+        <td>
+          {{ data['name'] }} &lt;{{ data['email-address'] }}&gt;
+        </td>
+        <td class="change-answer">
+          <a href="./blue-badge-who">
+            Change <span class="visuallyhidden">Who will be responsible for the data access</span>
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          When the data will be acccessed
+        </td>
+        <td>
+          {{ data_when }}
+        </td>
+        <td class="change-answer">
+          <a href="./blue-badge-when">
+            Change <span class="visuallyhidden">When the data will be accessed</span>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="heading-medium">Now send your request</h2>
+
+  <p class="text">
+    By submitting this request you are confirming that, to the best of your knowledge, the details you are providing are correct.
+  </p>
+
+  <div class="form-group">
+    <a href="./done" class="button">Accept and send request</a>
+  </div>
+
+</main>
+
+{% endblock %}
