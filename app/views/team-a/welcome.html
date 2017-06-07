@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-large">Welcome {{ data['local-authority'] }}!</h2>
+      <p>You can apply for access to the following eligibility check services.</p>
+      <ul class="list list-bullet">
+        <li><a href="./apply-blue-badge">Blue Badge eligibility check</a></li>
+        <li><a href="./apply-free-school-meals">Free School Meals eligibility check</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+      <p>
+        If the eligibility check you want to perform isn't listed, 
+        please <a href="mailto:pde@digital.cabinet-office.gov.uk">get in touch with us</a>.
+      </p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+

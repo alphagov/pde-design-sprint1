@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-large">Check that you can use this platform</h2>
+      <p>Personal Data Exchange is only currently open to central or local government.</p>
+
+      <form method="POST" action="./welcome">
+        <div class="form-group">
+          <label class="form-label-bold" for="local-authority">Central or local department</label>
+          <select class="form-control" id="local-authority" name="local-authority">
+            <option value="Surrey County Council">Surrey County Council</option>
+            <option value="Shoreditch County Council">Shoreditch County Council</option>
+            <option value="Warwickshire County Council">Warwickshire County Council</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="email-address">E-mail address</label>
+          <span class="form-hint">You'll need to use an official e-mail address ending in gov.uk to use this service.</span>
+          <input class="form-control" type="text" name="email-address" id="email-address"/>
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="grid row">
+    <div class="column-full">
+      <p>If your department or organisation isn't listed, please <a href="mailto:pde@digital.cabinet-office.gov.uk">contact us</a>.</p>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

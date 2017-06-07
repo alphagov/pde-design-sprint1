@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-large">Confirm who will be responsible for the eligibility check</h2>
+      <p>Someone from your organisation will need to sign an agreement between {{ data['local-authority'] }} and DWP.</p>
+      <p>This will be your senior information risk owner or equivalent information owner.</p>
+
+      <form method="POST" action="./blue-badge-how">
+        <div class="form-group">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-control" type="text" name="name" id="name"/>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email-address">E-mail address</label>
+          <input class="form-control" type="text" name="email-address" id="email-address"/>
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

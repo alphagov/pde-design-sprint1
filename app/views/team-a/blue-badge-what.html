@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h2 class="heading-large">Confirm what eligibility check will be accessed</h2>
+
+      <form action="./blue-badge-who" method="POST">
+      <div class="form-group">
+        <p>Does the following statement explain what data you want access to?</p>
+        <div class="panel panel-border-wide">
+          For a specified citizen, the following information:
+          <ol class="list list-number">
+            <li>A yes or no answer confirming whether:
+              <ul class="list list-bullet">
+                <li>They have a score of 8 or more on the 'moving around' part of Personal Independence Payment criteria, or</li>
+                <li>They receive the higher rate of the mobility component of the Disibility Living Allowance.</li>
+              </ul>
+            </li>
+            <li>The latest expiry date for the benefits that were accessd in part 1.</li>
+          </ol>
+        </div>
+
+        <div class="multiple-choice">
+          <input type="radio" name="data-access" id="data-access-yes" value="Yes"/>
+          <label for="data-access-yes">Yes</label>
+        </div>
+        <div class="multiple-choice" data-target="edit-data-access">
+          <input type="radio" name="data-access" id="data-access-no" value="No"/>
+          <label for="data-se-no">No</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="edit-data-access">
+          <label class="form-label-bold" for="custom-data-access">What data do you want access to?</label>
+          <textarea class="form-control" name="custom-data-a" id="custom-data-access"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p>Does the following statement explain how you will use the data?</p>
+        <div class="panel panel-border-wide">
+          You will only use the check to confirm whether a citizen automatically qualifies for a Blue Badge. 
+        </div>
+
+        <div class="multiple-choice">
+          <input type="radio" name="data-use" id="data-use-yes" value="Yes"/>
+          <label for="data-use-yes">Yes</label>
+        </div>
+        <div class="multiple-choice" data-target="edit-data-use">
+          <input type="radio" name="data-use" id="data-use-no" value="No"/>
+          <label for="data-use-no">No</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="edit-data-use">
+          <label class="form-label-bold" for="custom-data-use">How do you intend to use the data?</label>
+          <textarea class="form-control" name="custom-data-use" id="custom-data-use"></textarea>
+        </div>
+      </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+      <input type="submit" class="button" value="Next"/>
+    </div>
+
+    </form>
+</main>
+
+{% endblock %}
+
+
