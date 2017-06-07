@@ -307,3 +307,12 @@ a:focus {
     text-decoration: underline;
   }
 }
+
+.govuk-box-highlight {
+  text-align: left;
+  padding: 16px 32px;
+
+  .heading-xlarge {
+    margin-bottom: 16px;
+  }
+}
