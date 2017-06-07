@@ -11,23 +11,25 @@
     <div class="column-full">
       <h2 class="heading-large">Confirm when the eligibility check will be used</h2>
 
-      <form action="./blue-badge-legal-power" method="POST">
+      <form action="./confirm" method="POST">
         <div class="form-group">
           <p>Does the following statement explain when you will access the data?</p>
           <div class="panel panel-border-wide">
+            Eligibility checking will happen only when citizen's Blue Badge application
+            has been received and they have given permission to perform an eligibility check.
           </div>
 
           <div class="multiple-choice">
-            <input type="radio" name="data-access" id="data-access-yes" value="Yes"/>
-            <label for="data-access-yes">Yes</label>
+            <input type="radio" name="data-when" id="data-when-yes" value="Yes"/>
+            <label for="data-when-yes">Yes</label>
           </div>
-          <div class="multiple-choice" data-target="edit-data-access">
-            <input type="radio" name="data-access" id="data-access-no" value="No"/>
-            <label for="data-se-no">No</label>
+          <div class="multiple-choice" data-target="edit-data-when">
+            <input type="radio" name="data-when" id="data-when-no" value="No"/>
+            <label for="data-when-no">No</label>
           </div>
-          <div class="panel panel-border-narrow js-hidden" id="edit-data-access">
-            <label class="form-label-bold" for="custom-data-access">When will you access the data?</label>
-            <textarea class="form-control" name="custom-data-a" id="custom-data-access"></textarea>
+          <div class="panel panel-border-narrow js-hidden" id="edit-data-when">
+            <label class="form-label-bold" for="custom-data-when">When will you when the data?</label>
+            <textarea class="form-control" name="custom-data-when" id="custom-data-when"></textarea>
           </div>
         </div>
 

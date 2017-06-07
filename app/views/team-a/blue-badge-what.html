@@ -11,33 +11,63 @@
     <div class="column-full">
       <h2 class="heading-large">Confirm what eligibility check will be accessed</h2>
 
+          <p>
+          Blue Badge eligibility is confirmed by either of the following criteria:
+          <ul class="list list-bullet">
+            <li>They have a score of 8 or more on the 'moving around' part of Personal Independence Payment criteria, or</li>
+            <li>They receive the higher rate of the mobility component of the Disibility Living Allowance.</li>
+          </ul>
+          as set by the Department for Transport.
+        </p></div>
+  </div>
+  <br/>
+
+  <div class="grid-row">
+    <div class="column-full">
+
       <form action="./blue-badge-who" method="POST">
       <div class="form-group">
-        <p>Does the following statement explain what data you want access to?</p>
+        <p>Does the following statement explain what data you want to receive?</p>
         <div class="panel panel-border-wide">
-          For a specified citizen, the following information:
-          <ol class="list list-number">
-            <li>A yes or no answer confirming whether:
-              <ul class="list list-bullet">
-                <li>They have a score of 8 or more on the 'moving around' part of Personal Independence Payment criteria, or</li>
-                <li>They receive the higher rate of the mobility component of the Disibility Living Allowance.</li>
-              </ul>
-            </li>
-            <li>The latest expiry date for the benefits that were accessd in part 1.</li>
-          </ol>
+          I want to receive only a yes or no answer to the Blue Badge eligibility criteria and an expiry date for the eligibility.
         </div>
 
         <div class="multiple-choice">
-          <input type="radio" name="data-access" id="data-access-yes" value="Yes"/>
-          <label for="data-access-yes">Yes</label>
+          <input type="radio" name="data-what" id="data-what-yes" value="Yes"/>
+          <label for="data-what-yes">Yes</label>
         </div>
-        <div class="multiple-choice" data-target="edit-data-access">
-          <input type="radio" name="data-access" id="data-access-no" value="No"/>
-          <label for="data-se-no">No</label>
+        <div class="multiple-choice" data-target="edit-data-what">
+          <input type="radio" name="data-what" id="data-what-no" value="No"/>
+          <label for="data-what-no">No</label>
         </div>
-        <div class="panel panel-border-narrow js-hidden" id="edit-data-access">
-          <label class="form-label-bold" for="custom-data-access">What data do you want access to?</label>
-          <textarea class="form-control" name="custom-data-a" id="custom-data-access"></textarea>
+        <div class="panel panel-border-narrow js-hidden" id="edit-data-what">
+          <label class="form-label-bold" for="custom-data-what">What data do you want what to?</label>
+          <textarea class="form-control" name="custom-data-what" id="custom-data-what"></textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p>Do you agree to provide the following data in order to receive the eligibility results?</p>
+        <div class="panel panel-border-wide">
+          <ul class="list list-bullet">
+            <li>First name</li>
+            <li>Surname</li>
+            <li>Date of birth</li>
+            <li>National Insurance number</li>
+          </ul>
+        </div>
+
+        <div class="multiple-choice">
+          <input type="radio" name="data-what" id="data-what-yes" value="Yes"/>
+          <label for="data-what-yes">Yes</label>
+        </div>
+        <div class="multiple-choice" data-target="edit-data-what">
+          <input type="radio" name="data-what" id="data-what-no" value="No"/>
+          <label for="data-what-no">No</label>
+        </div>
+        <div class="panel panel-border-narrow js-hidden" id="edit-data-what">
+          <label class="form-label-bold" for="custom-data-what">What data do you want what to?</label>
+          <textarea class="form-control" name="custom-data-what" id="custom-data-what"></textarea>
         </div>
       </div>
 
