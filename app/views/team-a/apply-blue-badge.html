@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-large">Get access to the Blue Badge eligibility checker</h1>
+      <p>This tool will allow you to add an automatic check against the Personal Independence Payment (PIP)
+        and Disability Living Allowance (DLA) from the Department of Work and Pensions. The check will tell you whether
+        a citizen is automatically eligible for a Blue Badge according to the PIP and DLA data.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+      <p>The get access to the checker, you will need to:</p>
+      <ul class="list list-bullet">
+        <li>review and confirm how the eligibility check will be used</li>
+        <li>tell us who in your department will use the checker</li>
+        <li>accept the terms and conditions of the access agreement</li>
+      </ul>
+
+      <form action="./blue-badge-what">
+        <input type="submit" class="button" value="Continue to questions"/>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
