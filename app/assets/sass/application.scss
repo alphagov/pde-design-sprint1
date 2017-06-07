@@ -287,3 +287,23 @@ a:focus {
   background-color: $error-colour;
   border-bottom: darken($error-colour, 5%);
 }
+
+.boxed-content {
+  background-color: $light-blue;
+  color: $white;
+  margin-bottom: 20px;
+  padding: 16px;
+
+  .data {
+    margin-bottom: 0;
+  }
+
+  .data-item:first-of-type {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

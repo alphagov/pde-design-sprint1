@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Dashboard - Personal Data Exchange
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" tabindex="-1">
+ <h1 class="heading-large">Dashboard</h1>
+
+  <div class="grid-row">
+    <div class="column-one-half">
+      <div class="boxed-content">
+        <div class="data">
+          <span class="data-item bold-xlarge">25</span>
+          <span class="data-item bold-xsmall"><a href="#">services using your data</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="column-one-half">
+      <div class="boxed-content">
+        <div class="data">
+        <span class="data-item bold-xlarge">3</span>
+        <span class="data-item bold-xsmall"><a href="#">new requests</a></span>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  <h2 class="heading-medium">3 data requests</h2>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Department</th>
+        <th scope="col">Service</th>
+        <th scope="col">Eligibilty</th>
+        <th scope="col">Legal Agreement</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Essex County Council
+        </td>
+        <td>
+          Blue badge
+        </td>
+        <td>
+          Pip score
+        </td>
+        <td>
+          Yes
+        </td>
+        <td>
+          <a href="#">
+            Review
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Department for Education
+        </td>
+        <td>
+          Blue badge
+        </td>
+        <td>
+          Pip score
+        </td>
+        <td>
+          Yes
+        </td>
+        <td>
+          <a href="#">Review</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Warwickshire County Council
+        </td>
+        <td>
+          Blue badge
+        </td>
+        <td>
+          Pip score
+        </td>
+        <td>
+          Yes
+        </td>
+        <td>
+          <a href="#">
+            Review
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>
+
+{% endblock %}
