@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!--
+      <a class="link-back" href="#">Back</a>
+      -->
+
+      <h1 class="heading-large">
+        Eligibility check result
+      </h1>
+
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1" style="margin-bottom: 0;">
+          Eligibility cannot be confirmed
+        </h1>
+      </div>
+
+      <div class="panel panel-border-wide">
+        <p>
+          The Department for Work and Pensions could not match these details to a person
+        </p>
+      </div>
+
+      <br>
+      <a href="choose-check">Do another check</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

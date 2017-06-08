@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <a class="link-back" href="login">Back</a>
+
+      <h1 class="heading-large">
+        Data sharing agreements
+      </h1>
+
+      <br>
+
+      <h3 class="heading-medium">Services you have a DSA to check eligibility<h3>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Blue badge service</td>
+            <td><a href="#">View data sharing agreement</a></td>
+          </tr>
+          <tr>
+            <td>Free bus pass</td>
+            <td><a href="#">View data sharing agreement</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="heading-medium">Other services<h3>
+
+      <table>
+        <tbody>
+          <tr>
+            <td>Free school meals</td>
+            <td><a href="#">Apply to access data</a></td>
+          </tr>
+          <tr>
+            <td>Free education for 2 year olds/td>
+            <td><a href="#">Apply to access data</a></td>
+          </tr>
+          <tr>
+            <td>Free school meals</td>
+            <td><a href="#">Apply to access data</a></td>
+          </tr>
+          <tr>
+            <td>Another service</td>
+            <td><a href="#">Apply to access data</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      <br>
+      
+      <form class="form" action="citizen-details" method="post">
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        <div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <!--
+      <a class="link-back" href="#">Back</a>
+      -->
+
+      <h1 class="heading-large">
+        Eligibility check result
+      </h1>
+
+      <div class="govuk-box-highlight" style="background-color: #B10E1E;">
+        <h1 class="bold-large">Not eligible for a blue badge permit</h1>
+          The reference number for this check<br>
+          <strong class="heading-medium">HDJ2123F</strong>
+      </div>
+
+      <div class="panel panel-border-wide">
+        <p>
+          The Department for Work and Pensions has confirmed that this citizen does not match any eligibility criteria
+        </p>
+      </div>
+
+      <br>
+      <a href="choose-check">Do another check</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

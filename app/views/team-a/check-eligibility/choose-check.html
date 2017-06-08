@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="login">Back</a>
+
+      <h1 class="heading-large">
+        Which service do you want to check eligibilty for?
+      </h1>
+
+      <br>
+      
+      <form class="form" action="citizen-details" method="post">
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend class="visually-hidden">Which service do you want to check eligibilty for?</legend>
+
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="which-service" value="blue-badge" 
+                {{ checked ('which-service',"Blue badge") }} >
+              <label for="radio-1">Blue badge</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="which-service" value="something-else"
+                {{ checked ('which-service',"Something else") }} >
+              <label for="radio-2">Something else</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+        <!-- /form-group -->
+
+        <details>
+          <summary><span class="summary">Why are only these checks available?</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>
+              The checks you can perform are based on existing data sharing agreements between your organisations and the organisation acting as the <a href="#">data authority</a>.
+            </p>
+          </div>
+        </details>
+        <br>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        <div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

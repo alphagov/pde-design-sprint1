@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="citizen-details">Back</a>
+
+      <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+        <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+          Not enough information to confirm eligibility
+        </h1>
+        <ul class="error-summary-list">
+          <li>The Department for Work and Pensions has been unable to match those details to a person</li>
+        </ul>
+      </div>
+
+      <form class="form" action="response" method="post">
+
+        <div class="form-group">
+         <label class="form-label" for="ni-number">National Insurance Number</label>
+         <input class="form-control" type="text" name="ni-number" id="ni-number">
+        </div>
+
+        <!--
+        <div class="form-group">
+         <label class="form-label" for="first-name">First name</label>
+         <input class="form-control" type="text" value="" name="first-name" id="first-name">
+        </div>
+
+        <div class="form-group">
+         <label class="form-label" for="last-name">Last name</label>
+         <input class="form-control" type="text" name="last-name" id="last-name">
+        </div>
+
+        <div class="form-group">
+         <label class="form-label" for="address">Full address</label>
+         <textarea class="form-control" type="text" name="address" id="address"></textarea>
+        </div>
+
+        <div class="form-group">
+         <label class="form-label" for="date-of-birth">Date of birth</label>
+         <input class="form-control" type="text" name="date-of-birth" id="date-of-birth">
+        </div>
+        -->
+
+        <div class="form-group">
+          <input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
