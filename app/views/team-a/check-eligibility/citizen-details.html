@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+
+      <a class="link-back" href="choose-check">Back</a>
+
+      <h1 class="heading-large">
+        Enter the citizen's details
+      </h1>
+
+      <div class="panel panel-border-wide">
+        <p>
+          The details you enter will used to check:
+        </p>
+        <ul class="list list-bullet">
+        	<li>The mobility element of their PIP score <span style="color: #aaa;">(Department for Work and Pensions)</span></li>
+        	<li>Their DLA score <span style="color: #aaa;">(Department for Work and Pensions)</span></li>
+        	<li>If they are on the Blind Register <span style="color: #aaa;">(RNIB)</span></li>
+      </div>
+      <br>
+
+      <form class="form" action="fail" method="post">
+
+  	    <div class="form-group">
+  			 <label class="form-label" for="first-name">First name</label>
+  			 <input class="form-control" type="text" value="" name="first-name" id="first-name">
+  		  </div>
+
+  		  <div class="form-group">
+  			 <label class="form-label" for="last-name">Last name</label>
+  			 <input class="form-control" type="text" name="last-name" id="last-name">
+  		  </div>
+
+  		  <div class="form-group">
+  			 <label class="form-label" for="address">Full address</label>
+  			 <textarea class="form-control" type="text" name="address" id="address"></textarea>
+  		  </div>
+
+        <div class="form-group">
+         <label class="form-label" for="date-of-birth">Date of birth</label>
+         <input class="form-control" type="text" name="date-of-birth" id="date-of-birth">
+        </div>
+
+  		  <!--
+        <div class="form-group">
+  			 <label class="form-label" for="ni-number">National Insurance Number</label>
+  			 <input class="form-control" type="text" name="ni-number" id="ni-number">
+  		  </div>
+        -->
+
+  		  <div class="form-group">
+  		    <input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue">
+  		  </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
