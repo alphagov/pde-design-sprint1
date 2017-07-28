@@ -316,3 +316,32 @@ a:focus {
     margin-bottom: 16px;
   }
 }
+
+.button-start-page {
+  margin-bottom: 40px;
+}
+
+.dob {
+  .form-group {
+    display: inline-block;
+    width: auto;
+    margin-right: 20px;
+  }
+  .form-control {
+    width: 55px;
+  }
+  .form-control.year {
+    width: 80px;
+  }
+}
+
+.form-label {
+  font-weight: bold;
+  &.sublabel {
+    font-weight: normal;
+  }
+}
+
+#global-header .header-wrapper .header-global .header-logo {
+  width: 100%;
+}

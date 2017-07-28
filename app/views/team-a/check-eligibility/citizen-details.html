@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Question page
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
 {% endblock %}
 
 {% block content %}
@@ -10,20 +18,44 @@
   <div class="grid-row">
     <div class="column-full">
 
-      <a class="link-back" href="choose-check">Back</a>
+      <!-- <a class="link-back" href="choose-check">Back</a> -->
 
       <h1 class="heading-large">
-        Enter the citizen's details
+        Add the applicant’s details
       </h1>
 
-      <div class="panel panel-border-wide">
+      <div>
         <p>
-          The details you enter will used to check:
+          We’ll check against 2 things:
         </p>
         <ul class="list list-bullet">
+        <li>
+          The mobility element of the Personal Independence Payment (PIP) score
+          <details>
+            <summary><span class="summary">What is PIP?</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>The PIP is made by the Department for Work and Pensions for applicants needing financial help managing longer-term ill health issues or a disability.</p>
+              <a href="http://www.gov.uk/pip/overview">View details</a>
+            </div>
+          </details>
+        </li>
+        <li>
+          The Disability Living Allowance (DLA) score
+          <details>
+            <summary><span class="summary">What is PIP?</span></summary>
+            <div class="panel panel-border-narrow">
+              <p>The DLA is made by the Department for Work and Pensions for applicants needing financial help with mobility or care costs.</p>
+              <a href="https://www.gov.uk/dla-disability-living-allowance-benefit">View details</a>
+            </div>
+          </details>
+        </li>
+
+      </ul>
+
+        <!-- <ul class="list list-bullet">
         	<li>The mobility element of their PIP score <span style="color: #aaa;">(Department for Work and Pensions)</span></li>
         	<li>Their DLA score <span style="color: #aaa;">(Department for Work and Pensions)</span></li>
-        	<li>If they are on the Blind Register <span style="color: #aaa;">(RNIB)</span></li>
+        	<li>If they are on the Blind Register <span style="color: #aaa;">(RNIB)</span></li> -->
       </div>
       <br>
 
@@ -45,16 +77,28 @@
   		  </div>
 
         <div class="form-group">
-         <label class="form-label" for="date-of-birth">Date of birth</label>
+         <label class="form-label" for="date-of-birth">National Insurance number</label>
          <input class="form-control" type="text" name="date-of-birth" id="date-of-birth">
         </div>
 
-  		  <!--
-        <div class="form-group">
-  			 <label class="form-label" for="ni-number">National Insurance Number</label>
-  			 <input class="form-control" type="text" name="ni-number" id="ni-number">
+  		  <div class="dob">
+        <label class="form-label" for="date-of-birth">Date of birth</label>
+          <div class="form-group">
+
+    			 <label class="form-label sublabel" for="ni-number">Day</label>
+    			 <input class="form-control day" type="text" name="ni-number" id="ni-number">
+    		  </div>
+          <div class="form-group">
+    			 <label class="form-label sublabel" for="ni-number">Month</label>
+    			 <input class="form-control month" type="text" name="ni-number" id="ni-number">
+    		  </div>
+          <div class="form-group">
+    			 <label class="form-label sublabel" for="ni-number">Year</label>
+    			 <input class="form-control year" type="text" name="ni-number" id="ni-number">
+    		  </div>
   		  </div>
-        -->
+
+
 
   		  <div class="form-group">
   		    <input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue">

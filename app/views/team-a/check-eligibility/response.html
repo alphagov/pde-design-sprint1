@@ -1,7 +1,15 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Confirmation page example
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
 {% endblock %}
 
 {% block content %}
@@ -16,21 +24,16 @@
       -->
 
       <h1 class="heading-large">
-        Eligibility check result
+        Eligibility check complete
       </h1>
 
       <div class="govuk-box-highlight">
-        <h1 class="bold-large">Eligible for a blue badge permit</h1>
+        <h1 class="bold-large">Approved for a blue badge permit</h1>
       </div>
 
-      <div class="panel panel-border-wide">
-        <p>
-          The Department for Work and Pensions has confirmed that the mobility element of their PIP score is higher than 8
-        </p>
-      </div>
 
       <br>
-      <a href="choose-check">Do another check</a>
+      <a href="start-page">Do another check</a>
 
     </div>
   </div>
