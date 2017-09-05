@@ -41,8 +41,7 @@
     </div>
 
     <div id="global-cookie-message">
-
-        {% block cookie_message %}{% endblock %}
+      {% block cookie_message %}{% endblock %}
     </div>
 
     <header role="banner" id="global-header" class="{% block header_class %}{% endblock %}">
@@ -60,7 +59,7 @@
         {% block proposition_header %}{% endblock %}
       </div>
     </header>
-
+    <div id="global-header-bar"></div>
 
     {% block after_header %}{% endblock %}
 
@@ -95,7 +94,6 @@
     <script src="{{ asset_path }}javascripts/govuk-template.js?0.19.2"></script>
 
     {% block body_end %}{% endblock %}
-
 
     <script>if (typeof window.GOVUK === 'undefined') document.body.className = document.body.className.replace('js-enabled', '');</script>
   </body>
