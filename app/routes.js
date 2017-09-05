@@ -17,4 +17,17 @@ router.get('/team-a/confirm', function (req, res) {
   })
 })
 
+router.post('/v2-a/response', function (req, res) {
+
+  var isEligible = req.session.data['dob-year']
+
+  if (isEligible == 1970) {
+    res.redirect('/v2-a/response-approved')
+  } else if(isEligible == 1980) {
+    res.redirect('/v2-a/response-declined')
+  } else {
+    res.redirect('/v2-a/response-referred')
+  }
+})
+
 module.exports = router

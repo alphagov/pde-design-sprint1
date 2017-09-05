@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK PDE - Applicant details
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-xlarge">Add the applicant’s details</h1>
+
+      <p>We’ll check against 2 things:</p>
+      <ul class="list list-bullet">
+        <li>
+          The mobility element of the <a href="http://www.gov.uk/pip/overview" target="_blank">Personal Independence Payment</a> (PIP) score
+        </li>
+        <li>
+          The <a href="https://www.gov.uk/dla-disability-living-allowance-benefit" target="_blank">Disability Living Allowance (DLA) score</a>
+        </li>
+      </ul>
+
+      <form class="form" action="response" method="post">
+        <div class="form-group">
+          <label class="form-label" for="firstname">First name</label>
+          <input class="form-control" type="text" name="firstname" id="firstname">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="lastname">Last name</label>
+          <input class="form-control" type="text" name="lastname" id="lastname">
+        </div>
+
+        <div class="form-group">
+          <fieldset>
+            <legend class="form-label-bold">Date of birth</legend>
+
+            <div class="form-date">
+              <p class="form-hint text">For example, 31 3 1980</p>
+
+              <div class="form-group form-group-day">
+                <label class="form-label sublabel" for="dob-day">Day</label>
+                <input class="form-control day" type="text" name="dob-day" id="dob-day">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label class="form-label sublabel" for="dob-month">Month</label>
+                <input class="form-control month" type="text" name="dob-month" id="dob-month">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label class="form-label sublabel" for="dob-year">Year</label>
+                <input class="form-control year" type="text" name="dob-year" id="dob-year">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="ni">National Insurance number</label>
+          <p class="form-hint text">It's on your National Insurance card, benefit letter, payslip or P60. For example, 'VO 12 34 56 D'.</p>
+          <input class="form-control" type="text" name="ni" id="ni">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="address">Postcode</label>
+          <p class="form-hint text">For example SW2 5XH</p>
+          <input class="form-control" type="text" name="address" id="address"></input>
+          <br>
+          <a href="#" data-target="select-address">Find UK address</a>
+          <select id="select-address" class="js-hidden">
+            <option>Something</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" name="commit" value="Continue" class="button" data-disable-with="Continue">
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

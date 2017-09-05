@@ -309,10 +309,12 @@ a:focus {
 }
 
 .govuk-box-highlight {
-  text-align: left;
-  padding: 16px 32px;
+  .heading-large {
+    margin-top: 0px;
+  }
 
-  .heading-xlarge {
+  .font-large {
+    font-size: 30px;
     margin-bottom: 16px;
   }
 }
