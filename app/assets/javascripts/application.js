@@ -34,3 +34,12 @@ function do_switch(previewer, appender, tab){
   $(document).click();
   return false;
 }
+
+$('#lookup_field').setupPostcodeLookup({
+  api_key: 'ak_j78tnpl0lRr72HLzSYZ804qr7KeNs',
+  input: '#address',
+  button_class: 'button-text',
+  input_class: 'form-control',
+  dropdown_class: 'form-control',
+  button_label: 'Find UK address'
+});
