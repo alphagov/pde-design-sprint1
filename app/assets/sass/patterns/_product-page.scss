@@ -1,0 +1,225 @@
+.masthead {
+  background-color: $govuk-blue;
+  margin-top: -10px;
+}
+
+.breadcrumbs {
+  @extend %site-width-container;
+  @include core-16($line-height: (25 / 16), $line-height-640: 1.75);
+
+  padding: $gutter-one-third 0;
+  list-style: none;
+
+  ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    margin: 0;
+    padding: 0 $gutter-one-quarter 0 (11px + $gutter-one-quarter);
+
+    background-image: image-url('govuk_frontend_toolkit/images/separator.png');
+    background-repeat: no-repeat;
+    background-size: 6px 11px;
+    background-position: left center;
+
+    white-space: nowrap;
+
+    @include device-pixel-ratio(2) {
+      background-image: image-url('govuk_frontend_toolkit/images/separator-2x.png');
+    }
+
+    &,
+    a:link,
+    a:hover,
+    a:active,
+    a:visited {
+      color: $black;
+    }
+
+    &--active {
+      @include bold-16;
+
+      a:link,
+      a:visited {
+        text-decoration: none;
+      }
+    }
+
+    &:first-child {
+      padding-left: 0;
+      background-image: none;
+    }
+  }
+
+  &--inverse {
+    border-bottom: 1px $white solid;
+    border-bottom-color: rgba($white, 0.25);
+
+    .breadcrumbs__item {
+      margin-bottom: 0;
+
+      &--active,
+      a:link,
+      a:hover,
+      a:active,
+      a:visited {
+        color: $white;
+      }
+
+      a:focus {
+        color: $black;
+      }
+    }
+  }
+}
+
+.hero {
+  @extend %site-width-container;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $white;
+  padding: $gutter-half 0;
+
+  @include media(tablet) {
+    padding: $gutter 0;
+  }
+
+  &--breaded {
+    padding-top: 0;
+  }
+
+  a:link,
+  a:visited {
+    font-weight: bold;
+    color: $white;
+  }
+
+  a:hover,
+  a:active {
+    color: $light-blue-25;
+  }
+
+  a:focus {
+    color: $black;
+  }
+
+  &__title {
+    @include bold-48;
+  }
+
+  &__description {
+    @include core-24;
+  }
+
+  &__title,
+  &__description {
+    margin-bottom: $gutter-half;
+
+    @include media(tablet) {
+      margin-bottom: $gutter;
+    }
+  }
+
+
+  &__inline-image {
+    text-align: center;
+
+    @include media(tablet) {
+      display: none;
+      visibility: hidden;
+    }
+
+    img {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+
+  &__aside-image {
+    display: none;
+    visibility: hidden;
+
+    @include media(tablet) {
+      display: block;
+      visibility: visible;
+    }
+
+    img {
+      max-width: 100%;
+      margin-top: $gutter-half;
+    }
+  }
+
+  &__content {
+    @extend %grid-row;
+  }
+
+  &__body,
+  &__aside-image {
+    @include grid-column(1 / 2);
+  }
+
+  @include media(desktop) {
+    &__body {
+      @include grid-column(2 / 3);
+    }
+
+    &__aside-image {
+      @include grid-column(1 / 3);
+    }
+  }
+}
+
+$hero-button-arrow-width: 26px;
+$hero-button-arrow-height: 30px;
+
+a.hero-button {
+  @include button($white);
+  @include bold-24;
+  @include box-shadow(0 2px 0 darken($govuk-blue, 10%));
+
+  background-image: file-url('/images/hero-button/arrow.png');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 95% 50%;
+
+  padding: 0.3684210526em 1em 0.2105263158em 0.8421052632em; // 5px 34px 3px 13px
+  margin: 0 0.416666667em 0.416666667em 0; // 0 10px 10px 0
+
+  display: block;
+  text-align: center;
+
+  @include device-pixel-ratio(2) {
+    background-image: file-url('/images/hero-button/arrow@2x.png');
+  }
+
+  @include media(tablet) {
+    display: inline-block;
+    text-align: left;
+  }
+
+  &,
+  &:link,
+  &:visited {
+    color: $link-colour;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $white;
+  }
+
+  &:hover {
+    color: $link-hover-colour;
+  }
+
+  &:active {
+    color: $link-active-colour;
+  }
+}

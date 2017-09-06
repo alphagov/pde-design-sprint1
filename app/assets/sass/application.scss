@@ -15,6 +15,8 @@ $path: "/public/images/";
 @import 'patterns/tabs';
 @import 'patterns/subnav';
 @import 'patterns/helpers';
+@import 'patterns/secondary-nav';
+@import 'patterns/product-page';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -38,13 +40,18 @@ table {
   margin-bottom: 40px;
 }
 
-// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-.masthead {
-    margin: 0;
-    background: #eee;
-    padding: 0 1.5em 2em 1.5em;
+table td,table th {
+  font-size: 16px;
+  padding: 15px 40px 15px 0;
 }
+
+table th:last-child,
+table td:last-child {
+  padding-right: 0;
+  text-align: right;
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 /* Facet block */
 .filter-block {

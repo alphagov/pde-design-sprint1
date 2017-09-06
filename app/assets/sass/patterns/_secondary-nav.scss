@@ -1,0 +1,46 @@
+.secondary-nav-wrapper {
+  @extend %site-width-container;
+  @extend %contain-floats;
+}
+
+.secondary__nav {
+  border-bottom: 1px solid $grey-3;
+  font-size: 0;
+  list-style-type: none;
+  padding: 11px 0 9px 0;
+}
+
+.secondary__nav-item {
+  display: inline-block;
+  margin-right: 15px
+}
+
+.secondary__nav-link {
+  display: block;
+  font-size: 14px;
+  line-height: 1.25;
+  position: relative;
+  text-decoration: none
+}
+
+@media (min-width: 769px) {
+  .secondary__nav-link {
+    font-size: 16px;
+    line-height: 1.5
+  }
+}
+
+.active .secondary__nav-link {
+  color: #0b0c0c;
+  font-weight: bold;
+}
+
+.active .secondary__nav-link:after {
+  background: $black;
+  bottom: -10px;
+  content: "";
+  display: block;
+  height: 4px;
+  position: absolute;
+  width: 100%
+}
