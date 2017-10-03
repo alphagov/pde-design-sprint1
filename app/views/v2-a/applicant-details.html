@@ -6,18 +6,20 @@
 
 {% block content %}
 
+{% include "includes/secondary_nav.html" %}
+
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-full">
       <h1 class="heading-xlarge">Add the applicant’s details</h1>
 
-      <p>We’ll check against 2 things:</p>
+      <p>We’ll check against the applicant’s scores for:</p>
       <ul class="list list-bullet">
         <li>
-          The mobility element of the <a href="http://www.gov.uk/pip/overview" target="_blank">Personal Independence Payment</a> (PIP) score
+          the mobility part of <a href="https://www.gov.uk/pip/what-youll-get" target="_blank">Personal Independence Payment</a> (PIP)
         </li>
         <li>
-          The <a href="https://www.gov.uk/dla-disability-living-allowance-benefit" target="_blank">Disability Living Allowance (DLA) score</a>
+          <a href="https://www.gov.uk/dla-disability-living-allowance-benefit" target="_blank">Disability Living Allowance (DLA)</a>
         </li>
       </ul>
 
@@ -59,13 +61,13 @@
 
         <div class="form-group">
           <label class="form-label" for="ni">National Insurance number</label>
-          <p class="form-hint text">It's on your National Insurance card, benefit letter, payslip or P60. For example, 'VO 12 34 56 D'.</p>
+          <p class="form-hint text">For example, VO 12 34 56 D</p>
           <input class="form-control" type="text" name="ni" id="ni">
         </div>
 
         <div class="form-group">
           <label class="form-label" for="address">Postcode</label>
-          <p class="form-hint text">For example SW2 5XH</p>
+          <p class="form-hint text">For example, ID1 1QD</p>
           <input class="form-control form-control-1-4" type="text" name="address" id="address">
           <div id="lookup_field"></div>
         </div>
