@@ -10,14 +10,14 @@ deploy:
 - provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
   script: ./create-release.sh
   on: master
-- provider: heroku
-  api_key:
-    secure: h/9/Rcd41XVU4VYYeBoKKvG6uShEoDksCGGZ/2dgeY1f3tYnhGzzgL6TIkvhafwDbKk2Y4o6d/MI05K+s7lorf2uTKpr1To2o52hQqmb4YREPWruZtBqoRo5X4nCeN2oEdW+yJRH3jZDNUmwkPzjytqxkcUUUeDPHfz3+xCtSZk=
-  app: govuk-prototype-kit
-  on: master
-notifications:
-  email: false
-sudo: false
-env:
-  global:
-  - secure: esj3ut+TwKX25QzU1koJyTVIX+x1V55graI65X8LiYXKcOP040VPJ9lIC0HeRs5UViBM0Ur1F93rGdgW2zYVzu5MLZoH7KjpzMcG30x+FDqLChT0JfNcLLtLm/wIhx/OAAmsBxXlvjPp092BeEKd3Jug8d329TxwwK5G5XxAatg=
+- provider: cloudfoundry
+  api: https://api.cloud.service.gov.uk
+  username:
+    secure: aad1yzduy5uEWKC9yTXYWi+gpZs6H5RepaQxER0GE8zOkViy/l2aGCapmDjbzWfhEJw8683eLas9nV3V5LWIaP6VEwM6kkro/KiGD0MFyqQ59QMJVveYzBezbUKMg5tqPzKjAwdO+NVdCA6NMQVC4usfgfMor78W05tdC9CfNti397RQMsZCp7RBRBnhk0y6bI/6D9oKuzC+NjDTMq7ttGaKLYVh69fHyyIisBzADDpWmRTAFfALzyw6PF7PiGhdog46O0in0QnOO4iiFoP4w5L15s5PHDIHgrM4s6ze7zTIjwbVbjzdhvoFuM05ML2mHpWBX+U6T8aatSk7AkpQl2ESYg/dVjL2ghjZ4tFLbkqn70r81U5uNxOgt6LhJnKeBNguZHXMZoQFIZujVIxkBTyTE4jCkTnC0MJ+Y2IcwzRKMchl1nmmCi/hDndDaMU9UHptA++CPG4fIvzpJZc2GMCqmHNfOEM7hYqkDIutSONj1fooMiUJKNXVbfXusSraLEYTh2nQ1tzFA82rg7+YxWGZYwjRqlfbT/GnOg8pGrHcso6OgNaMqr/FA5jylYEzUTIWm6j5TcOVVOFx1ohNVUc/y/tcFp1HbSkkAsZEuUockmrmoOw6HCOIVDjI+HSqPQCvAlSnt9TLzK3VkUcRlqDF4tAYV/lTPU8klqT0CZc=
+  password:
+    secure: ioH6moP2M/xGX1hRPzgSj75GV2DGfkQibxiPAFsRTVRbzc/E8jNvAnV4uzmpufBdutU4ppkizSO7UKfODQnYijSnyMrMw88WcLlMOaUKuE3Ya8o4Ni9eiHvyVwc3RTxwe3+BjEyGmEnJh5K/6++ZHzgPz+IPkfmXcX4jsrewIhfUmYqpT1yve+cOJIl8fidIxYgjpTkRA9+f5bsksdPPQbxdWGp5HvLOG5lvt1OP7qUrooTJ2Sq46XHKb5slDdal2cFylkHbIQYEqk4aHHR2/xtS0VfH8PnpEgAVRVfuSVPPph69Yd6GWO2PjnIxfzrTt5zat438dnX7YwuL7dWx+1TJ16Fly9oaRX/fH4h3cZE1Ao9khnRd615GyeS+ynhxaFwB2Ic1V1K15OwvHs8HpKi5npwlrjn21USUoGO+NWJWHQ1TNOKfkb6JcSH3U4W3+v1WJEZqKCz3WQ8qlyAIoUWfLSYcpDfVnM+9XTq92IV5yUTkg4xFuNT+gVGzirLINLI3qGf5VTSpveI0wjK2GCPwbJnSe1aLL1iivR3CbUSYbTdrz/AJgkE4pW9Vui0ZlUBaDHVCvfUB2oKsvDIOglv6+KZBvQYqpvvxNqPKEuX9CQEWvDsXL23JSszVfK+5KAyrlmsHJP0FvnEHRXGIgb5zlCG3m6R65sJVoULujUY=
+  organization: gds-data-infrastructure-pde
+  space: sandbox
+  on:
+    branch: master
+    repo: alphagov/pde-design-sprint1
