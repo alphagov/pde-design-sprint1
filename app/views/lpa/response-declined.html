@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK PDE - Declined
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/secondary_nav.html" %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">The donor doesn’t receive any of the means-tested benefits</h1>
+
+      <p class="text">They are not eligible for an exemption.</p>
+
+      <p>
+        <details>
+          <summary><span class="summary">What benefits have been checked?</span></summary>
+
+          <ul class="list list-bullet">
+            <li>Income Support</li>
+            <li>Income-based Employment and Support Allowance</li>
+            <li>Guarantee Credit element of State Pension Credit</li>
+            <li>Housing Benefit</li>
+            <li>Council Tax Reduction/Support &endash; also known by other names (not the 25% single person discount or the Class U exemption)</li>
+            <li>Local Housing Allowance</li>
+            <li>
+              A combination of Working Tax Credit and at least one of:
+              <ul>
+                <li>Child Tax Credit</li>
+                <li>Disability Element of Working Tax Credit</li>
+                <li>Severe Disability Element of Working Tax Credit</li>
+              </ul>
+            </li>
+          </ul>
+        </details>
+      </p>
+
+      <a href="start-page">Do another check</a>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

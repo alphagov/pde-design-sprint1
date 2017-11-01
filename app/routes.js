@@ -42,4 +42,17 @@ router.post('/v2-b/response', function (req, res) {
   }
 })
 
+router.post('/lpa/response', function (req, res) {
+
+  var isEligible = req.session.data['dob-year']
+
+  if (isEligible == 1970) {
+    res.redirect('/lpa/response-approved')
+  } else if(isEligible == 1980) {
+    res.redirect('/lpa/response-declined')
+  } else {
+    res.redirect('/lpa/response-referred')
+  }
+})
+
 module.exports = router

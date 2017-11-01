@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK PDE - Referred
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/secondary_nav.html" %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">We couldn’t match the donor’s details</h1>
+
+      <p class="text">
+        You can <a href="javascript:window.history.back()">check their details</a> again
+        or you might need to ask the donor to send evidence showing they receive a means-tested benefit.</p>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
