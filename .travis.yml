@@ -1,15 +1,11 @@
 language: node_js
 node_js:
-- 4.0
 - 6.0
 before_deploy:
 - test $TRAVIS_TEST_RESULT = 0
 before_install:
 - npm install -g mocha
 deploy:
-- provider: script    # (If version.txt is updated) - create a new tag and push to Github, update the latest-release branch
-  script: ./create-release.sh
-  on: master
 - provider: cloudfoundry
   api: https://api.cloud.service.gov.uk
   username:

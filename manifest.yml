@@ -1,6 +1,6 @@
 ---
 applications:
-- name: pde-design-sprint1
+- name: pde-alphas
   buildpack: nodejs_buildpack
   memory: 128MB
   instances: 1
